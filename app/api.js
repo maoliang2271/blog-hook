@@ -1,7 +1,7 @@
 
 const exec = require('child_process').exec;
 const path = require('path');
-let buildPATH = path.join(__dirname, '../');
+const buildPATH = path.join(__dirname, '../../');
 
 let api = {
     push (req, res) {
@@ -24,7 +24,7 @@ let api = {
         child.on('close', function(code) {
           console.log('closing code: ' + code);
         });
-        
+
     }
 };
 
