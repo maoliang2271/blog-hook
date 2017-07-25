@@ -10,7 +10,7 @@ let api = {
             rm -rf my-blog
             git clone https://github.com/maoliang2271/my-blog.git
             cd my-blog
-            npm i && npm start
+            npm i --registry=https://registry.npm.taobao.org && npm start
         `;
 
         let child = exec(command);
