@@ -1,5 +1,5 @@
 
-const childProcess = require('child_process');
+const exec = require('child_process').exec;
 const path = require('path');
 let buildPATH = path.join(__dirname, '../');
 
@@ -13,22 +13,18 @@ let api = {
             npm i && npm start
         `;
 
-        childProcess.exec(command, {
-            cwd: path.dirname(__dirname)
-        }, (error, stdout, stderr) => {
-            return new Promise((resovle, reject) => {
-                if (error) {
-                    reject(error);
-                }
-                else {
-                    resovle(stdout);
-                }
-            });
-        }).then(stdout => {
+        let child = exec(command);
 
-        }).catch(error => {
-
+        child.stdout.on('data', function(data) {
+          console.log('stdout: ' + data);
         });
+        child.stderr.on('data', function(data) {
+          console.log('stdout: ' + data);
+        });
+        child.on('close', function(code) {
+          console.log('closing code: ' + code);
+        });
+        
     }
 };
 
