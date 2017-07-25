@@ -5,16 +5,11 @@ let buildPATH = path.join(__dirname, '../');
 
 let api = {
     push (req, res) {
-        let params = req.params;
-        console.log(req);
-        console.log(params);
-        let gitURL = (params.project['git_http_url'] || params.project['git_ssh_url']);
-        let name = params['name'];
         let command = `
             cd ${buildPATH}
-            rm -rf ${name}
-            git clone ${gitURL}
-            cd ${name}
+            rm -rf my-blog
+            git clone https://github.com/maoliang2271/my-blog.git
+            cd my-blog
             npm i && npm start
         `;
 
