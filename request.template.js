@@ -8,8 +8,8 @@ let request = {
     'checkout_sha': 'b787ccada08588342f71b860236a0a6b0345126a',
     'message': null,
     'user_id': 752153,
-    'user_name': 'Yern Sun',
-    'user_email': 'yernsun@yernsun.com',
+    'user_name': 'andy',
+    'user_email': '',
     'user_avatar': 'https://gitlab.com/uploads/user/avatar/752153/avatar.png',
     'project_id': 3140857,
     'project': {

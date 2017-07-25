@@ -1,7 +1,7 @@
 
 const childProcess = require('child_process');
 const path = require('path');
-let buildPATH = path.resovle(__dirname, '../');
+let buildPATH = path.join(__dirname, '../');
 
 let api = {
     push (req, res) {
